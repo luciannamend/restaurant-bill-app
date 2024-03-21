@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lucia\\Desktop\\CENTENNIAL\\4_SEMESTER_W24\\PROGRAMMING_3\\ASSIGNMENT\\3\\WPFDataBinding\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{07BA3D65-1208-47AC-9BA1-5598AFB811F3}|RestaurantBill\\RestaurantBill.csproj|c:\\users\\lucia\\desktop\\centennial\\4_semester_w24\\programming_3\\assignment\\3\\wpfdatabinding\\restaurantbill\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{07BA3D65-1208-47AC-9BA1-5598AFB811F3}|RestaurantBill\\RestaurantBill.csproj|solutionrelative:restaurantbill\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07BA3D65-1208-47AC-9BA1-5598AFB811F3}|RestaurantBill\\RestaurantBill.csproj|c:\\users\\lucia\\desktop\\centennial\\4_semester_w24\\programming_3\\assignment\\3\\wpfdatabinding\\restaurantbill\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07BA3D65-1208-47AC-9BA1-5598AFB811F3}|RestaurantBill\\RestaurantBill.csproj|solutionrelative:restaurantbill\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07BA3D65-1208-47AC-9BA1-5598AFB811F3}|RestaurantBill\\RestaurantBill.csproj|c:\\users\\lucia\\desktop\\centennial\\4_semester_w24\\programming_3\\assignment\\3\\wpfdatabinding\\restaurantbill\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07BA3D65-1208-47AC-9BA1-5598AFB811F3}|RestaurantBill\\RestaurantBill.csproj|solutionrelative:restaurantbill\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 250,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Lucia\\Desktop\\CENTENNIAL\\4_SEMESTER_W24\\PROGRAMMING_3\\ASSIGNMENT\\3\\WPFDataBinding\\RestaurantBill\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "RestaurantBill\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Lucia\\Desktop\\CENTENNIAL\\4_SEMESTER_W24\\PROGRAMMING_3\\ASSIGNMENT\\3\\WPFDataBinding\\RestaurantBill\\MainWindow.xaml",
+              "RelativeToolTip": "RestaurantBill\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-20T17:17:00.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Lucia\\Desktop\\CENTENNIAL\\4_SEMESTER_W24\\PROGRAMMING_3\\ASSIGNMENT\\3\\WPFDataBinding\\RestaurantBill\\App.xaml.cs",
+              "RelativeDocumentMoniker": "RestaurantBill\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\Lucia\\Desktop\\CENTENNIAL\\4_SEMESTER_W24\\PROGRAMMING_3\\ASSIGNMENT\\3\\WPFDataBinding\\RestaurantBill\\App.xaml.cs",
+              "RelativeToolTip": "RestaurantBill\\App.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T17:07:16.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Lucia\\Desktop\\CENTENNIAL\\4_SEMESTER_W24\\PROGRAMMING_3\\ASSIGNMENT\\3\\WPFDataBinding\\RestaurantBill\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "RestaurantBill\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Lucia\\Desktop\\CENTENNIAL\\4_SEMESTER_W24\\PROGRAMMING_3\\ASSIGNMENT\\3\\WPFDataBinding\\RestaurantBill\\MainWindow.xaml.cs",
+              "RelativeToolTip": "RestaurantBill\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAHUAAAAAAAAAAIAwwIcAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T17:07:34.137Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 323,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
