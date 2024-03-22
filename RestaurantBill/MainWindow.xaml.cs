@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace RestaurantBill
 {
@@ -71,14 +70,16 @@ namespace RestaurantBill
             }
         }
 
-        // Method for selecting item do include on the bill
+        // Event handler for selecting item do include on the bill
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            // sender cast to the combobox
             ComboBox comboBox = sender as ComboBox;
 
             // If combobox is not null and has a selected item
             if (comboBox != null && comboBox.SelectedItem != null)
             {
+                // get the selected item and its price
                 string selectedItem = comboBox.SelectedItem.ToString();
                 decimal itemPrice = GetItemPrice(selectedItem, comboBox.Name);
 
@@ -87,7 +88,7 @@ namespace RestaurantBill
 
                 if (existingItem != null)
                 {
-                    // Item already exists, update quantity and subtotal
+                    // Item exists, update quantity and subtotal
                     existingItem.Quantity += 1;
                     existingItem.TotalPrice = existingItem.Quantity * existingItem.Price;
                 }
@@ -98,7 +99,7 @@ namespace RestaurantBill
                     orderedItems.Add(newItem);
                 }
 
-                // Update DataGrid
+                // Update DataGrid and bill amounts
                 dgBillItems.Items.Refresh();
                 UpdateBillAmounts();
             }
@@ -142,6 +143,48 @@ namespace RestaurantBill
             MessageBox.Show(this, $"Item Removed!");
         }
 
+        private bool isCommittingEdit = false;
+
+        private void dgBillItems_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            // If the edit is committed
+            if (e.EditAction == DataGridEditAction.Commit)
+            {
+                // Get the edited cell
+                DataGridCell cell = e.Column.GetCellContent(e.Row)?.Parent as DataGridCell;
+
+                // If the cell belongs to the Quantity column
+                if (cell != null && cell.Column.DisplayIndex == 0) //it's the first column (index 0)
+                {
+                    // Get the edited quantity
+                    TextBox textBox = cell.Content as TextBox;
+                    if (textBox != null && int.TryParse(textBox.Text, out int newQuantity))
+                    {
+                        // Update the quantity in the data source (orderedItems)
+                        MenuItem item = e.Row.Item as MenuItem;
+                        if (item != null)
+                        {
+                            subtotal -= item.TotalPrice; 
+                            item.Quantity = newQuantity;
+                            item.TotalPrice = item.Quantity * item.Price; 
+                            subtotal += item.TotalPrice;
+
+                            UpdateBillAmounts();
+                        }
+                    }
+                }
+            }
+        }
+
+        private void dgBillItems_CurrentCellChanged(object sender, EventArgs e)
+        {
+            DataGrid dataGrid = sender as DataGrid;
+            if (dataGrid != null)
+            {
+                dataGrid.Items.Refresh();
+            }
+        }
+
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
             // Clear the original orderedItems collection
@@ -161,9 +204,9 @@ namespace RestaurantBill
             txtTotal.Text = total.ToString("C");
         }
 
-        private void OpenWebsite(object sender, RoutedEventArgs e)
+        private void OpenWebsite(object sender, MouseButtonEventArgs e)
         {
-            // Open Centennial College's website in Internet Explorer
+            // Open Centennial College's website in Internet Explorer when image is clicked
             Process.Start(new ProcessStartInfo("iexplore.exe", "https://www.centennialcollege.ca/"));
         }
 

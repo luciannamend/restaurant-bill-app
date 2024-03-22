@@ -8,47 +8,41 @@
         Title="Restaurant Bill" Height="600" Width="900">
     <Grid>
         <!-- StatusBar -->
-        <StatusBar Height="28" 
-                   VerticalAlignment="Top">
-            <!--<StatusBarItem>
-                <Image Source="centennial_logo.png" 
-                       Width="20" 
-                       Height="20" 
-                       MouseLeftButtonDown="OpenWebsite"/>
-            </StatusBarItem>-->
+        <StatusBar Height="86" VerticalAlignment="Top" Margin="4,488,-4,0">
+            <StatusBarItem HorizontalAlignment="Right">
+                <Image Source="/Images/restaurant-logo.jpg" Width="99" Height="90" MouseDown="OpenWebsite" />
+            </StatusBarItem>
 
-            <StatusBarItem Margin="0,1,0,404">
-                <TextBlock Text="Lucianna Mendonca" 
-                           Width="253" 
-                           Height="24"/>
+            <StatusBarItem Margin="0,18,0,0" Width="758">
+                <TextBlock Text="Lucianna Mendonca" Width="244" Height="53" FontSize="18" VerticalAlignment="Center"/>
             </StatusBarItem>
         </StatusBar>
 
         <!-- ComboBoxes for menu categories -->
         <ComboBox x:Name="cmbBeverage" 
                   SelectionChanged="ComboBox_SelectionChanged" 
-                  Margin="64,81,546,424" VerticalContentAlignment="Center" FontSize="18"/>
+                  Margin="72,45,538,460" VerticalContentAlignment="Center" FontSize="18"/>
         <ComboBox x:Name="cmbAppetizer" 
                   SelectionChanged="ComboBox_SelectionChanged" 
-                  Margin="64,189,546,316" VerticalContentAlignment="Center" FontSize="18"/>
+                  Margin="72,153,538,352" VerticalContentAlignment="Center" FontSize="18"/>
         <ComboBox x:Name="cmbMainCourse" 
                   SelectionChanged="ComboBox_SelectionChanged" 
-                  Margin="64,305,546,202" FontSize="18" UseLayoutRounding="False" VerticalContentAlignment="Center"/>
+                  Margin="72,269,538,238" FontSize="18" UseLayoutRounding="False" VerticalContentAlignment="Center"/>
         <ComboBox x:Name="cmbDessert" 
                   SelectionChanged="ComboBox_SelectionChanged" 
-                  Margin="64,409,546,97" VerticalContentAlignment="Center" FontSize="18"/>
+                  Margin="72,373,538,133" VerticalContentAlignment="Center" FontSize="18"/>
 
         <!-- DataGrid to display bill items -->
-        <DataGrid x:Name="dgBillItems" AutoGenerateColumns="False" Margin="390,81,218,97">
+        <DataGrid x:Name="dgBillItems" AutoGenerateColumns="False" Margin="398,45,210,133" CellEditEnding="dgBillItems_CellEditEnding" CurrentCellChanged="dgBillItems_CurrentCellChanged">
             <DataGrid.Columns>
                 <!-- Quantity -->
-                <DataGridTextColumn Header="Qty" Binding="{Binding Quantity, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="14" MinWidth="40" />
+                <DataGridTextColumn Header="Qty" Binding="{Binding Quantity, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="14" MinWidth="40"/>
                 <!-- Item -->
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}" MinWidth="100" FontSize="14" IsReadOnly="True" />
                 <!-- Price -->
                 <DataGridTextColumn Header="Price" Binding="{Binding Price, StringFormat='{}{0:C}'}" FontSize="14" MinWidth="50" IsReadOnly="True" />
                 <!-- Total Price -->
-                <DataGridTextColumn Header="TotalPrice" Binding="{Binding TotalPrice, StringFormat='{}{0:C}'}" FontSize="14" MinWidth="70" IsReadOnly="True" />
+                <DataGridTextColumn Header="Total Price" Binding="{Binding TotalPrice, StringFormat='{}{0:C}'}" FontSize="14" MinWidth="70" IsReadOnly="True" />
             </DataGrid.Columns>
             <DataGrid.ContextMenu>
                 <ContextMenu>
@@ -58,25 +52,25 @@
         </DataGrid>
 
         <!-- TextBoxes for bill amounts -->
-        <Label Content="    Subtotal" Margin="741,79,72,451"/>
+        <Label Content="    Subtotal" Margin="749,43,64,487"/>
         <TextBox x:Name="txtSubtotal" 
                  IsReadOnly="True" 
-                 Margin="714,104,73,414" HorizontalContentAlignment="Right" VerticalContentAlignment="Stretch" FontSize="20"/>
-        <Label Content="      13% Tax" Margin="741,189,72,333"/>
+                 Margin="722,68,65,450" HorizontalContentAlignment="Right" VerticalContentAlignment="Stretch" FontSize="20"/>
+        <Label Content="      13% Tax" Margin="749,153,64,369"/>
         <TextBox x:Name="txtTax" 
                  IsReadOnly="True" 
-                 Margin="714,218,73,300" HorizontalContentAlignment="Right" VerticalContentAlignment="Stretch" FontSize="20"/>
-        <Label Content="        TOTAL" Margin="741,305,73,231"/>
+                 Margin="722,182,65,336" HorizontalContentAlignment="Right" VerticalContentAlignment="Stretch" FontSize="20"/>
+        <Label Content="        TOTAL" Margin="749,269,65,267"/>
         <TextBox x:Name="txtTotal" 
                  IsReadOnly="True" 
-                 Margin="714,330,73,188" HorizontalContentAlignment="Right" VerticalContentAlignment="Stretch" FontSize="20"/>
+                 Margin="722,294,65,224" HorizontalContentAlignment="Right" VerticalContentAlignment="Stretch" FontSize="20"/>
 
 
         <!-- Clear Button -->
         <Button x:Name="btnClear" 
-                Content="Clear All" 
+                Content="Clear Bill" 
                 Click="btnClear_Click" 
-                Margin="714,433,73,97" FontSize="14"/>
+                Margin="722,397,65,133" FontSize="14"/>
 
     </Grid>
 
